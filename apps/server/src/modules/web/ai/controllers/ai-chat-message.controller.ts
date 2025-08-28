@@ -190,7 +190,7 @@ export class AiChatMessageController extends BaseController {
                     model: model.model,
                     messages: currentMessages,
                     tools: tools.length > 0 ? tools : [],
-                    tool_choice: "auto",
+                    tool_choice: tools.length > 0 ? "auto" : "none",
                     ...opts,
                 });
 
