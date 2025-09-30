@@ -49,7 +49,7 @@ const columnLabels = computed(() => ({
     fileName: t("console-ai-datasets.documents.table.fileName"),
     fileSize: t("console-ai-datasets.documents.table.fileSize"),
     status: t("console-common.status"),
-    process: t("console-ai-datasets.documents.table.progress"),
+    progress: t("console-ai-datasets.documents.table.progress"),
     enabled: t("console-common.status"),
     characterCount: t("console-ai-datasets.documents.table.characterCount"),
     chunkCount: t("console-ai-datasets.documents.table.chunkCount"),
@@ -214,7 +214,7 @@ const columns: TableColumn<DatasetDocument>[] = [
     },
     {
         accessorKey: "progress",
-        header: () => h("p", { class: "whitespace-nowrap" }, `${columnLabels.value.process}`),
+        header: () => h("p", { class: "whitespace-nowrap" }, `${columnLabels.value.progress}`),
         cell: ({ row }) => {
             const progress = row.original.progress || 0;
 
